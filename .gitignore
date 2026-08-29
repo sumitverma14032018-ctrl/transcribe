@@ -1,0 +1,11 @@
+venv/
+__pycache__/
+*.py[cod]
+.DS_Store
+.vscode/
+downloads/
+transcriptions/
+*.mp3
+*.mp4
+*.wav
+*.m4a

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TubeScribe - Premium Transcription</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="background-blur"></div>
+    <main class="container">
+        <header>
+            <h1>Tube<span>Scribe</span></h1>
+            <p>High-fidelity transcriptions powered by Whisper Large-v3</p>
+        </header>
+
+        <section class="input-card">
+            <div class="mode-toggle">
+                <button id="mode-url" class="active">YouTube URL</button>
+                <button id="mode-path">Local File Path</button>
+            </div>
+            <div class="input-group">
+                <input type="text" id="url-input" placeholder="Paste YouTube URL here..." autocomplete="off">
+                <input type="text" id="path-input" class="hidden"
+                    placeholder="Enter absolute file path (e.g. /Users/name/audio.mp3)" autocomplete="off">
+                <button id="transcribe-btn">Transcribe</button>
+            </div>
+        </section>
+
+        <section id="progress-card" class="card hidden">
+            <div class="status-header">
+                <h3 id="status-text">Starting...</h3>
+                <span id="progress-percent">0%</span>
+            </div>
+            <div class="progress-bar-container">
+                <div id="progress-fill" class="progress-fill"></div>
+            </div>
+        </section>
+
+        <section id="logs-card" class="card hidden">
+            <div class="card-header">
+                <h3>Live Logs</h3>
+            </div>
+            <div id="log-container" class="log-viewport"></div>
+        </section>
+
+        <section id="output-card" class="card hidden">
+            <div class="output-header">
+                <h3>Transcription</h3>
+                <button id="copy-btn">Copy Text</button>
+            </div>
+            <div class="output-content">
+                <pre id="transcription-text"></pre>
+            </div>
+        </section>
+    </main>
+    <script src="main.js"></script>
+</body>
+
+</html>
